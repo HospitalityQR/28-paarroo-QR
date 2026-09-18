@@ -520,6 +520,7 @@
 
     <!-- Central Configuration Script -->
     <script src="config.js"></script>
+    <script src="28-paarroo/config.js"></script>
     <script>
         function applyConfig(cfg) {
             if (!cfg) return;
@@ -587,14 +588,17 @@
 
         // Bypass mobile browser cache when hosted online
         if (window.location.protocol.startsWith('http')) {
-            fetch('config.js?t=' + Date.now(), { cache: 'no-store' })
-                .then(res => res.text())
-                .then(text => {
-                    const fn = new Function(text + '\nreturn (typeof RESTAURANT_CONFIG !== "undefined") ? RESTAURANT_CONFIG : null;');
-                    const cfg = fn();
-                    if (cfg) applyConfig(cfg);
-                })
-                .catch(err => console.warn('Dynamic config load fallback:', err));
+            const urls = ['config.js?t=' + Date.now(), '28-paarroo/config.js?t=' + Date.now()];
+            urls.forEach(u => {
+                fetch(u, { cache: 'no-store' })
+                    .then(res => { if (res.ok) return res.text(); throw new Error('Not found'); })
+                    .then(text => {
+                        const fn = new Function(text + '\nreturn (typeof RESTAURANT_CONFIG !== "undefined") ? RESTAURANT_CONFIG : null;');
+                        const cfg = fn();
+                        if (cfg) applyConfig(cfg);
+                    })
+                    .catch(() => {});
+            });
         }
     </script>
 </body>

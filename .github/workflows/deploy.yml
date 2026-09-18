@@ -43,6 +43,12 @@ jobs:
             fi
           done
 
+      - name: Sync 28-paarroo Config to Root
+        run: |
+          if [ -f "28-paarroo/config.js" ]; then
+            cp "28-paarroo/config.js" "config.js"
+          fi
+
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
