@@ -19,16 +19,16 @@
 
     <style>
         :root {
-            --bg-gradient-start: #1a0307;
-            --bg-gradient-mid: #2c0710;
-            --bg-gradient-end: #100204;
+            --bg-gradient-start: #300610;
+            --bg-gradient-mid: #1c0307;
+            --bg-gradient-end: #0c0103;
             --gold-primary: #d4af37;
             --gold-light: #fbe69b;
             --gold-dark: #9e7817;
             --gold-gradient: linear-gradient(135deg, #fbe69b 0%, #d4af37 50%, #9e7817 100%);
-            --card-bg: rgba(255, 255, 255, 0.05);
-            --card-border: rgba(212, 175, 55, 0.3);
-            --card-border-hover: rgba(212, 175, 55, 0.75);
+            --card-bg: rgba(255, 255, 255, 0.04);
+            --card-border: rgba(212, 175, 55, 0.24);
+            --card-border-hover: rgba(212, 175, 55, 0.6);
             --text-primary: #ffffff;
             --text-secondary: #f3d7dc;
             --text-muted: #bda2a7;
@@ -43,7 +43,7 @@
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background: linear-gradient(165deg, var(--bg-gradient-start) 0%, var(--bg-gradient-mid) 45%, var(--bg-gradient-end) 100%);
+            background: radial-gradient(circle at 50% 22%, #320711 0%, #1b0307 55%, #0c0103 100%);
             color: var(--text-primary);
             min-height: 100vh;
             display: flex;
@@ -192,7 +192,7 @@
             text-decoration: none;
             color: #ffffff;
             background: rgba(255, 255, 255, 0.045);
-            border: 1.5px solid var(--card-border);
+            border: 1px solid var(--card-border);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -333,26 +333,26 @@
         .restaurant-meta {
             width: 100%;
             background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            border: 1px solid rgba(212, 175, 55, 0.18);
             border-radius: 16px;
-            padding: 16px;
+            padding: 13px 16px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 12px;
+            gap: 9px;
         }
 
         .meta-item {
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-size: 13px;
+            gap: 7px;
+            font-size: 12.5px;
             color: var(--text-secondary);
         }
 
         .meta-item svg {
-            width: 16px;
-            height: 16px;
+            width: 15px;
+            height: 15px;
             fill: var(--gold-primary);
             flex-shrink: 0;
         }
@@ -363,13 +363,13 @@
             justify-content: center;
             gap: 8px;
             width: 100%;
-            padding: 12px 18px;
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.25) 0%, rgba(212, 175, 55, 0.12) 100%);
-            border: 1.5px solid var(--gold-primary);
-            border-radius: 12px;
+            padding: 10px 16px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.22) 0%, rgba(212, 175, 55, 0.08) 100%);
+            border: 1px solid var(--gold-primary);
+            border-radius: 11px;
             color: var(--gold-light);
             text-decoration: none;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 700;
             letter-spacing: 0.3px;
             transition: all 0.25s ease;
