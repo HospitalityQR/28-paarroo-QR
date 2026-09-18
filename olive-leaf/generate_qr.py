@@ -20,7 +20,7 @@ def load_config():
         "restaurantName": "Olive Leaf",
         "tagline": "PURE VEGETARIAN • FINE DINING",
         "qrMode": "dual_link",
-        "landingPageUrl": "https://namangarg-06.github.io/all-restaurant-qr-/olive-leaf/",
+        "landingPageUrl": "https://namangarg-06.github.io/All-Restaurants-QR-/olive-leaf/",
         "googleReviewLink": "https://share.google/CAuKpe2Po706mPhkI",
         "instagramLink": "https://www.instagram.com/oliveleafindore?stkn=MXduZGk2ZzU3emZjdw==",
         "phoneNumber": "9993896969",

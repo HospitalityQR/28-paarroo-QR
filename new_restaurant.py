@@ -1,5 +1,5 @@
 """
-Quick Restaurant Creator for all-restaurant-qr- Hub
+Quick Restaurant Creator for All-Restaurants-QR- Hub
 Usage:
     python new_restaurant.py "Restaurant Name"
 Example:
@@ -81,7 +81,7 @@ var RESTAURANT_CONFIG = {{
     footerThanks: "Thank You For Dining With Us ✨",
     footerCity: "Crafted with care in Indore",
 
-    landingPageUrl: "https://namangarg-06.github.io/all-restaurant-qr-/{slug}/"
+    landingPageUrl: "https://namangarg-06.github.io/All-Restaurants-QR-/{slug}/"
 }};
 
 if (typeof module !== 'undefined' && module.exports) {{

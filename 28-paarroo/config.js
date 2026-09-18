@@ -44,8 +44,8 @@ var RESTAURANT_CONFIG = {
     footerThanks: "Thank You For Visiting 28 Paarroo 🌴",
     footerCity: "Crafted with care in Indore",
 
-    // 8. Hosted Landing Page URL on all-restaurant-qr-
-    landingPageUrl: "https://namangarg-06.github.io/all-restaurant-qr-/28-paarroo/"
+    // 8. Hosted Landing Page URL on All-Restaurants-QR-
+    landingPageUrl: "https://namangarg-06.github.io/All-Restaurants-QR-/28-paarroo/"
 };
 
 if (typeof module !== 'undefined' && module.exports) {

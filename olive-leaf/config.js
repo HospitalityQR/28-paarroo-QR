@@ -42,8 +42,8 @@ var RESTAURANT_CONFIG = {
     footerThanks: "Thank You For Dining With Us 🌿",
     footerCity: "Crafted with care in Indore",
 
-    // 8. Hosted Landing Page URL on all-restaurant-qr-
-    landingPageUrl: "https://namangarg-06.github.io/all-restaurant-qr-/olive-leaf/"
+    // 8. Hosted Landing Page URL on All-Restaurants-QR-
+    landingPageUrl: "https://namangarg-06.github.io/All-Restaurants-QR-/olive-leaf/"
 };
 
 if (typeof module !== 'undefined' && module.exports) {

@@ -20,7 +20,7 @@ def load_config():
         "restaurantName": "28 Paarroo",
         "tagline": "SOUTH INDIAN & MULTI-CUISINE • PURE VEG",
         "qrMode": "dual_link",
-        "landingPageUrl": "https://namangarg-06.github.io/all-restaurant-qr-/28-paarroo/",
+        "landingPageUrl": "https://namangarg-06.github.io/All-Restaurants-QR-/28-paarroo/",
         "googleReviewLink": "https://share.google/ao3kZ8lE7ug4gjlHP",
         "instagramLink": "https://www.instagram.com/28paarroo?stkn=MTI4Y2NwcW5iNTRl",
         "phoneNumber": "9055966555",

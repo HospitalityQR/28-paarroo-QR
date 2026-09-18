@@ -2,7 +2,7 @@
 
 Is platform par aap ek hi GitHub repository me **multiple restaurants** ke luxury QR codes, mobile landing pages aur printable table standees manage kar sakte hain.
 
-👉 **GitHub Pages URL:** `https://namangarg-06.github.io/all-restaurant-qr-/`
+👉 **GitHub Pages URL:** `https://namangarg-06.github.io/All-Restaurants-QR-/`
 
 ---
 
@@ -11,7 +11,7 @@ Is platform par aap ek hi GitHub repository me **multiple restaurants** ke luxur
 Har restaurant ka apna **alag self-contained folder** hai. Kisi ek restaurant me change karne par **kisi dusre restaurant par 0% asar hoga**:
 
 ```
-all-restaurant-qr-/
+All-Restaurants-QR-/
 ├── index.html                   # Master Hub Directory (Saare restaurants ka portal)
 ├── new_restaurant.py            # Naya restaurant 5 second me add karne ka script
 ├── 28-paarroo/                  # 🌴 28 Paarroo (Old Palasia, Indore)
