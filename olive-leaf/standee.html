@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="standeeTitle">Olive Leaf Restaurant - Official Table Standee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            size: A4 portrait;
+            margin: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #eef2f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .print-btn-bar {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            background: #153123;
+            color: #f7e092;
+            border: 1px solid #d4af37;
+            padding: 10px 24px;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: all 0.2s;
+        }
+
+        .btn:hover {
+            background: #0d1e15;
+            transform: translateY(-2px);
+        }
+
+        /* Standee Card */
+        .standee-card {
+            width: 440px;
+            height: 680px;
+            background: linear-gradient(150deg, #091710 0%, #13281e 50%, #060e0a 100%);
+            border: 3px solid #d4af37;
+            border-radius: 20px;
+            padding: 24px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            color: #ffffff;
+            text-align: center;
+            page-break-inside: avoid;
+        }
+
+        .inner-border {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            right: 8px;
+            bottom: 8px;
+            border: 1px solid rgba(247, 224, 146, 0.4);
+            border-radius: 14px;
+            pointer-events: none;
+        }
+
+        /* Brand Top */
+        .brand-header {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 4px;
+        }
+
+        .logo-box {
+            background: #ffffff;
+            border: 2px solid #d4af37;
+            border-radius: 14px;
+            padding: 6px 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            max-width: 210px;
+            width: 70%;
+            margin-bottom: 8px;
+        }
+
+        .logo-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .veg-tag {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid #d4af37;
+            color: #f7e092;
+            padding: 4px 14px;
+            border-radius: 14px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        /* Middle QR Block */
+        .qr-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .scan-heading {
+            font-size: 18px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .scan-subheading {
+            font-size: 12px;
+            color: #e5c378;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .qr-box {
+            background: #ffffff;
+            padding: 12px;
+            border-radius: 18px;
+            border: 3px solid #d4af37;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            width: 246px;
+            height: 246px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .qr-box img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: 6px;
+        }
+
+        /* Platform Badges (Google & Instagram Logos) */
+        .platform-badges {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 22px;
+        }
+
+        .badge-pill {
+            background: #0f251a;
+            border: 1.5px solid #d4af37;
+            border-radius: 20px;
+            padding: 5px 12px;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 11.5px;
+            font-weight: 700;
+            color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .badge-ico {
+            width: 18px;
+            height: 18px;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        .footer-block {
+            margin-bottom: 2px;
+        }
+
+        .location-text {
+            font-size: 10.5px;
+            color: #8ca398;
+            margin-top: 2px;
+            line-height: 1.3;
+        }
+
+        .footer-note {
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            font-size: 14.5px;
+            color: #f7e092;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-top: 8px;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .print-btn-bar {
+                display: none !important;
+            }
+            .standee-card {
+                box-shadow: none;
+                margin: auto;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="print-btn-bar">
+        <button class="btn" onclick="window.print()">🖨️ Print Standee / Save as PDF</button>
+    </div>
+
+    <div class="standee-card">
+        <div class="inner-border"></div>
+
+        <!-- Header -->
+        <div class="brand-header">
+            <div class="logo-box">
+                <img src="logo.png" alt="Restaurant Logo" id="standeeLogo">
+            </div>
+            <div class="veg-tag" id="standeeTagline">PURE VEG • FINE DINING</div>
+        </div>
+
+        <!-- Middle QR Section -->
+        <div class="qr-section">
+            <h2 class="scan-heading" id="standeeScanHead">SCAN TO CONNECT</h2>
+            
+            <div class="platform-badges">
+                <div class="badge-pill">
+                    <img src="google_icon.png" alt="Google" class="badge-ico">
+                    <span>Rate Us on Google</span>
+                </div>
+                <div class="badge-pill">
+                    <img src="instagram_icon.png" alt="Instagram" class="badge-ico">
+                    <span>Follow Us on Instagram</span>
+                </div>
+            </div>
+
+            <div class="qr-box">
+                <img src="qr_code.png" alt="Scan QR Code">
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-block">
+            <p class="location-text" id="standeeAddress">Shop 9-10 Ground Floor, Skye Corporate Park, Vijay Nagar, Indore</p>
+            <p class="location-text" id="standeePhone" style="color: #c9d8d0; margin-top: 2px;">Call / Reservation: 9993896969</p>
+            <p class="footer-note" id="standeeFooterNote">Thank You For Dining With Us 🌿</p>
+        </div>
+    </div>
+
+    <!-- Central Configuration Loader Script -->
+    <script src="config.js?v=20260917_07"></script>
+    <script>
+        if (typeof RESTAURANT_CONFIG !== 'undefined') {
+            const cfg = RESTAURANT_CONFIG;
+            if (cfg.restaurantName) {
+                document.getElementById('standeeTitle').innerText = `${cfg.restaurantName} - Table Standee`;
+            }
+            if (cfg.logoImage) {
+                document.getElementById('standeeLogo').src = cfg.logoImage;
+            }
+            if (cfg.tagline) {
+                document.getElementById('standeeTagline').innerText = cfg.tagline.toUpperCase();
+            }
+            if (cfg.instagramUsername) {
+                document.getElementById('standeeInstaUser').innerText = cfg.instagramUsername;
+            }
+            if (cfg.standeeHeading) {
+                document.getElementById('standeeScanHead').innerText = cfg.standeeHeading;
+            }
+            if (cfg.standeeSubheading) {
+                document.getElementById('standeeScanSub').innerText = cfg.standeeSubheading;
+            }
+            if (cfg.footerThanks) {
+                document.getElementById('standeeFooterNote').innerText = cfg.footerThanks;
+            }
+            if (cfg.address) {
+                document.getElementById('standeeAddress').innerText = cfg.address;
+            }
+            if (cfg.phoneButtonText) {
+                document.getElementById('standeePhone').innerText = cfg.phoneButtonText;
+            }
+        }
+    </script>
+</body>
+</html>

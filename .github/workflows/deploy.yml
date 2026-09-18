@@ -1,4 +1,4 @@
-﻿name: Deploy to GitHub Pages
+name: Deploy All Restaurants to GitHub Pages
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Code
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -29,15 +29,23 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Generate QR codes and Standees
+      - name: Install Dependencies
         run: |
           pip install qrcode pillow
-          python generate_qr.py
 
-      - name: Setup Pages
+      - name: Auto-generate Standees & QR Codes for All Restaurants
+        run: |
+          for dir in */ ; do
+            if [ -f "${dir}generate_qr.py" ]; then
+              echo "Processing ${dir}..."
+              (cd "$dir" && python generate_qr.py)
+            fi
+          done
+
+      - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload artifact
+      - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
