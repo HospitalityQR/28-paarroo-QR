@@ -25,7 +25,7 @@ var RESTAURANT_CONFIG = {
     // 4. Google Review Link & Luxury Text
     googleReviewLink: "https://share.google/ao3kZ8lE7ug4gjlHP",
     googleRatingText: "Rate Us on Google",
-    googleRatingSubtext: "Share your 5-Star experience on Google",
+    googleRatingSubtext: "Share your experience on Google",
 
     // 5. Instagram Link & Profile Handle
     instagramLink: "https://www.instagram.com/28paarroo?stkn=MTI4Y2NwcW5iNTRl",
