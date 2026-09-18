@@ -9,7 +9,7 @@ var RESTAURANT_CONFIG = {
     // 1. Restaurant Basic Details
     restaurantId: "28-paarroo",
     restaurantName: "28 Paarroo",
-    tagline: "South Indian & Multi-Cuisine • Pure Veg Naman Garg",
+    tagline: "South Indian & Multi-Cuisine • Pure Veg Garg",
     logoImage: "logo_with_gold_rim.png",
 
     // 2. Standee & QR Mode:
