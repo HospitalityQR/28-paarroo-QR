@@ -2,7 +2,7 @@
 
 Is platform par aap ek hi GitHub repository me **multiple restaurants** ke luxury QR codes, mobile landing pages aur printable table standees manage kar sakte hain.
 
-👉 **GitHub Pages URL:** `https://namangarg-06.github.io/All-Restaurants-QR-/`
+👉 **GitHub Pages URL:** `https://hospitalityqr.github.io/28-paarroo-QR/`
 
 ---
 
