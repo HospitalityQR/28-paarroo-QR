@@ -504,6 +504,16 @@
     <script>
         function applyConfig(cfg) {
             if (!cfg) return;
+            // 🚀 Intelligent Auto-Redirect if mode is set to google_only or insta_only
+            if (cfg.qrMode === 'google_only' && cfg.googleReviewLink) {
+                window.location.replace(cfg.googleReviewLink);
+                return;
+            }
+            if (cfg.qrMode === 'insta_only' && cfg.instagramLink) {
+                window.location.replace(cfg.instagramLink);
+                return;
+            }
+
             if (cfg.restaurantName) {
                 document.getElementById('pageTitle').innerText = `${cfg.restaurantName} | Old Palasia, Indore`;
                 document.getElementById('uiTitle').innerText = cfg.restaurantName;
