@@ -16,7 +16,7 @@ var RESTAURANT_CONFIG = {
     // "dual_link"   -> Single QR opens the Landing Page (both Google & Instagram buttons)
     // "google_only" -> Single QR opens Google Review directly (Static)
     // "insta_only"  -> Single QR opens Instagram directly (Static)
-    qrMode: "google_only",
+    qrMode: "dual_link",
 
     // 3. Standee Premium Text
     standeeHeading: "SCAN TO CONNECT",
