@@ -45,7 +45,7 @@ var RESTAURANT_CONFIG = {
     footerCity: "Crafted with care in Indore",
 
     // 8. Hosted Landing Page URL on HospitalityQR
-    landingPageUrl: "https://hospitalityqr.github.io/28-paarroo/"
+    landingPageUrl: "https://hospitalityqr.github.io/28-paarroo-QR/"
 };
 
 if (typeof module !== 'undefined' && module.exports) {
