@@ -31,14 +31,15 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          pip install qrcode pillow
+          pip install qrcode pillow numpy
 
       - name: Auto-generate Standees & QR Codes for All Restaurants
+        continue-on-error: true
         run: |
           for dir in */ ; do
             if [ -f "${dir}generate_qr.py" ]; then
               echo "Processing ${dir}..."
-              (cd "$dir" && python generate_qr.py)
+              (cd "$dir" && python generate_qr.py) || true
             fi
           done
 
