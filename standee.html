@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="standeeTitle">28 Paarroo - Official Table Standee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            size: A4 portrait;
+            margin: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #f4ecee;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 24px;
+        }
+
+        .print-btn-bar {
+            margin-bottom: 22px;
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            background: #25060b;
+            color: #fbe69b;
+            border: 1.5px solid #d4af37;
+            padding: 11px 26px;
+            font-size: 15px;
+            font-weight: 700;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+            transition: all 0.25s ease;
+        }
+
+        .btn:hover {
+            background: #3d0913;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Standee Card */
+        .standee-card {
+            width: 440px;
+            height: 700px;
+            background: linear-gradient(160deg, #180306 0%, #29070f 50%, #100204 100%);
+            border: 3.5px solid #d4af37;
+            border-radius: 24px;
+            padding: 26px 22px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+            color: #ffffff;
+            text-align: center;
+            page-break-inside: avoid;
+        }
+
+        .inner-border {
+            position: absolute;
+            top: 9px;
+            left: 9px;
+            right: 9px;
+            bottom: 9px;
+            border: 1.5px solid rgba(251, 230, 155, 0.45);
+            border-radius: 16px;
+            pointer-events: none;
+        }
+
+        /* Brand Top */
+        .brand-header {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 4px;
+        }
+
+        .logo-box {
+            position: relative;
+            width: 115px;
+            height: 115px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-box img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), 0 0 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .brand-name {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .veg-tag {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid #d4af37;
+            color: #fbe69b;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 10.5px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+
+        /* Middle QR Block */
+        .qr-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .scan-heading {
+            font-size: 19px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 10px;
+            letter-spacing: 0.8px;
+        }
+
+        /* Platform Badges */
+        .platform-badges {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .badge-pill {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1.5px solid #d4af37;
+            border-radius: 20px;
+            padding: 5px 12px;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 11px;
+            font-weight: 700;
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+        }
+
+        .badge-ico {
+            width: 17px;
+            height: 17px;
+            object-fit: contain;
+            border-radius: 3px;
+        }
+
+        .qr-box {
+            background: #ffffff;
+            padding: 12px;
+            border-radius: 18px;
+            border: 3.5px solid #d4af37;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
+            width: 250px;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .qr-box img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: 6px;
+        }
+
+        /* Footer */
+        .footer-block {
+            margin-bottom: 2px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .location-text {
+            font-size: 11px;
+            color: #bda2a7;
+            line-height: 1.35;
+        }
+
+        .phone-text {
+            font-size: 11.5px;
+            color: #f3d7dc;
+            font-weight: 700;
+        }
+
+        .footer-note {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 15px;
+            color: #fbe69b;
+            font-weight: 600;
+            letter-spacing: 0.4px;
+            margin-top: 4px;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .print-btn-bar {
+                display: none !important;
+            }
+            .standee-card {
+                box-shadow: none;
+                margin: auto;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="print-btn-bar">
+        <button class="btn" onclick="window.print()">🖨️ Print Standee / Save as PDF</button>
+    </div>
+
+    <div class="standee-card">
+        <div class="inner-border"></div>
+
+        <!-- Header -->
+        <div class="brand-header">
+            <div class="logo-box">
+                <img src="logo_with_gold_rim.png" alt="28 Paarroo Logo" id="standeeLogo">
+            </div>
+            <h1 class="brand-name" id="standeeName">28 PAARROO</h1>
+            <div class="veg-tag" id="standeeTagline">SOUTH INDIAN & MULTI-CUISINE • PURE VEG</div>
+        </div>
+
+        <!-- Middle QR Section -->
+        <div class="qr-section">
+            <h2 class="scan-heading" id="standeeScanHead">SCAN TO CONNECT</h2>
+            
+            <div class="platform-badges">
+                <div class="badge-pill">
+                    <img src="google_icon.png" alt="Google" class="badge-ico">
+                    <span id="standeeGoogleText">Rate Us on Google</span>
+                </div>
+                <div class="badge-pill">
+                    <img src="instagram_icon.png" alt="Instagram" class="badge-ico">
+                    <span id="standeeInstaText">Follow Us on Instagram</span>
+                </div>
+            </div>
+
+            <div class="qr-box">
+                <img src="qr_code.png" alt="Scan QR Code" id="standeeQrImg">
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-block">
+            <p class="location-text" id="standeeAddress">28 Paarroo, Old Palasia, Indore</p>
+            <p class="phone-text" id="standeePhone">Call / Reservation: 90559 66555</p>
+            <p class="footer-note" id="standeeFooterNote">Thank You For Visiting 28 Paarroo 🌴</p>
+        </div>
+    </div>
+
+    <!-- Central Configuration Loader Script -->
+    <script src="config.js"></script>
+    <script>
+        if (typeof RESTAURANT_CONFIG !== 'undefined') {
+            const cfg = RESTAURANT_CONFIG;
+            if (cfg.restaurantName) {
+                document.getElementById('standeeTitle').innerText = `${cfg.restaurantName} - Official Table Standee`;
+                document.getElementById('standeeName').innerText = cfg.restaurantName.toUpperCase();
+            }
+            if (cfg.logoImage) {
+                document.getElementById('standeeLogo').src = cfg.logoImage;
+            }
+            if (cfg.tagline) {
+                document.getElementById('standeeTagline').innerText = cfg.tagline.toUpperCase();
+            }
+            if (cfg.standeeHeading) {
+                document.getElementById('standeeScanHead').innerText = cfg.standeeHeading;
+            }
+            if (cfg.googleRatingText) {
+                document.getElementById('standeeGoogleText').innerText = cfg.googleRatingText;
+            }
+            if (cfg.instagramActionText) {
+                document.getElementById('standeeInstaText').innerText = cfg.instagramActionText;
+            }
+            if (cfg.footerThanks) {
+                document.getElementById('standeeFooterNote').innerText = cfg.footerThanks;
+            }
+            if (cfg.address) {
+                document.getElementById('standeeAddress').innerText = cfg.address;
+            }
+            if (cfg.phoneButtonText) {
+                document.getElementById('standeePhone').innerText = cfg.phoneButtonText;
+            }
+        }
+    </script>
+</body>
+</html>
