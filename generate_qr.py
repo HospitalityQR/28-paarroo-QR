@@ -15,7 +15,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 def load_config():
     config = {
-        "landingPageUrl": "https://share.google/ao3kZ8lE7ug4gjlHP",
+        "landingPageUrl": "https://namangarg-06.github.io/28-Paarroo-QR/",
         "restaurantName": "28 Paarroo",
         "tagline": "SOUTH INDIAN & MULTI-CUISINE • PURE VEG",
         "phoneNumber": "9055966555",

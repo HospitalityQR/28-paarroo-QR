@@ -36,8 +36,8 @@ var RESTAURANT_CONFIG = {
     footerThanks: "Thank You For Visiting 28 Paarroo 🌴",
     footerCity: "Crafted with care in Indore",
 
-    // 7. Hosted Landing Page URL (Naye repo ke liye ya direct Google Review)
-    landingPageUrl: "https://share.google/ao3kZ8lE7ug4gjlHP"
+    // 7. Hosted Landing Page URL (28 Paarroo GitHub Pages live link)
+    landingPageUrl: "https://namangarg-06.github.io/28-Paarroo-QR/"
 };
 
 if (typeof module !== 'undefined' && module.exports) {
