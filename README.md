@@ -8,28 +8,21 @@ Is platform par aap ek hi GitHub repository me **multiple restaurants** ke luxur
 
 ## 🏛️ Folder Structure (100% Isolated Architecture)
 
-Har restaurant ka apna **alag self-contained folder** hai. Kisi ek restaurant me change karne par **kisi dusre restaurant par 0% asar hoga**:
+Har restaurant ka apna **alag self-contained folder** hai. Kisi ek restaurant me change karne par kisi dusre restaurant par 0% asar hoga:
 
 ```
 All-Restaurants-QR-/
-├── index.html                   # Master Hub Directory (Saare restaurants ka portal)
+├── index.html                   # Master Hub (28 Paarroo par auto-redirect ya directory)
 ├── new_restaurant.py            # Naya restaurant 5 second me add karne ka script
-├── 28-paarroo/                  # 🌴 28 Paarroo (Old Palasia, Indore)
-│   ├── config.js                # Is restaurant ki settings & links
-│   ├── index.html               # Mobile Landing Page
-│   ├── standee.html             # Printable Web Standee (Ctrl+P ready)
-│   ├── generate_qr.py           # Auto-generator script
-│   ├── table_standee_printable.png   # 300 DPI Luxury Standee
-│   ├── standee_dual_direct_static.png# Dual QR Standee (Google + Insta side-by-side)
-│   ├── standee_google_direct.png     # Google 5-Star Only Standee
-│   └── standee_instagram_direct.png  # Instagram Only Standee
-│
-├── olive-leaf/                  # 🌿 Olive Leaf Restaurant (Vijay Nagar, Indore)
-│   ├── config.js
-│   ├── index.html
-│   ├── standee.html
-│   ├── generate_qr.py
-│   └── (Saare Standees & QR codes)
+└── 28-paarroo/                  # 🌴 28 Paarroo (Old Palasia, Indore)
+    ├── config.js                # Is restaurant ki settings & links
+    ├── index.html               # Mobile Landing Page
+    ├── standee.html             # Printable Web Standee (Ctrl+P ready)
+    ├── generate_qr.py           # Auto-generator script
+    ├── table_standee_printable.png   # 300 DPI Luxury Standee
+    ├── standee_dual_direct_static.png# Dual QR Standee (Google + Insta side-by-side)
+    ├── standee_google_direct.png     # Google 5-Star Only Standee
+    └── standee_instagram_direct.png  # Instagram Only Standee
 ```
 
 ---

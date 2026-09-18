@@ -31,7 +31,7 @@ def create_new_restaurant(name):
     os.makedirs(slug, exist_ok=True)
 
     # Use 28-paarroo as base template
-    template_dir = "28-paarroo" if os.path.exists("28-paarroo") else "olive-leaf"
+    template_dir = "28-paarroo"
     if not os.path.exists(template_dir):
         print("Error: Template folder not found.")
         return
