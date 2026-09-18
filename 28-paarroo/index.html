@@ -314,11 +314,29 @@
             transition: all 0.25s ease;
         }
 
-        .action-card:hover .arrow-btn {
-            background: rgba(212, 175, 55, 0.28);
-            border-color: var(--gold-primary);
-            color: #ffffff;
-            transform: translateX(3px);
+        .arrow-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: none !important;
+            stroke: currentColor !important;
+            stroke-width: 2.2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            display: block;
+        }
+
+        .arrow-btn svg path {
+            fill: none !important;
+            stroke: currentColor !important;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            .action-card:hover .arrow-btn {
+                background: rgba(212, 175, 55, 0.28);
+                border-color: var(--gold-primary);
+                color: #ffffff;
+                transform: translateX(3px);
+            }
         }
 
         /* Footer & Contact Section */
@@ -453,7 +471,7 @@
                     </div>
                 </div>
                 <div class="arrow-btn" aria-label="Open Link">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </div>
             </a>
 
@@ -474,7 +492,7 @@
                     </div>
                 </div>
                 <div class="arrow-btn" aria-label="Open Link">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </div>
             </a>
         </main>
